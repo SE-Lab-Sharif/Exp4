@@ -7,6 +7,7 @@ import org.junit.Assert;
 
 import org.example.Calculator;
 
+import static org.example.Operations.DIVIDE;
 import static org.example.Operations.MULTIPLY;
 
 public class StepDefs {
@@ -29,6 +30,11 @@ public class StepDefs {
     @When("I multiply them")
     public void multiplyingNumbers() {
         result = calculator.process(number1, number2, MULTIPLY);
+    }
+
+    @When("I divide them")
+    public void dividingNumbers() {
+        result = calculator.process(number1, number2, DIVIDE);
     }
 
     @Then("I should get the result {double}")
