@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1f6dac1-b7ec-4dca-9e53-c21c06d4e8c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Multiplication.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Multiplication.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MultiplicationStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MultiplicationStepDef.java" afterDir="false" />
-    </list>
+    <list default="true" id="e1f6dac1-b7ec-4dca-9e53-c21c06d4e8c6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +15,7 @@
       <list>
         <option value="Gherkin feature file" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -101,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732294836408</updated>
-      <workItem from="1732294837405" duration="1460000" />
+      <workItem from="1732294837405" duration="2308000" />
     </task>
     <servers />
   </component>
