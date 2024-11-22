@@ -2,7 +2,8 @@
 Feature: multiplication operation
 
 Scenario Outline: multiply two double numbers and give the correct result
-  Given I have two numbers <number1> and <number2>
+  Given I have a calculator
+  And I have two numbers <number1> and <number2>
   When I multiply them
   Then I should get the result <result>
   Examples:
