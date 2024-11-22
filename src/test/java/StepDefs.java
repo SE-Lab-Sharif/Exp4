@@ -7,14 +7,16 @@ import org.junit.Assert;
 
 import org.example.Calculator;
 
-public class MultiplicationStepDef {
+import static org.example.Operations.MULTIPLY;
+
+public class StepDefs {
     private Calculator calculator;
     private double number1;
     private double number2;
     private double result;
 
     @Given("I have a calculator")
-    public void settingUpCalculator(double number1, double number2) {
+    public void settingUpCalculator() {
         calculator = new Calculator();
     }
 
@@ -26,7 +28,7 @@ public class MultiplicationStepDef {
 
     @When("I multiply them")
     public void multiplyingNumbers() {
-        result = calculator.multiply(number1, number2);
+        result = calculator.process(number1, number2, MULTIPLY);
     }
 
     @Then("I should get the result {double}")
