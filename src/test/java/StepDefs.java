@@ -3,6 +3,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import org.example.InvalidOperation;
+import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 
 import org.example.Calculator;
@@ -15,6 +17,7 @@ public class StepDefs {
     private double number1;
     private double number2;
     private double result;
+    private String exception;
 
     @Given("I have a calculator")
     public void settingUpCalculator() {
@@ -34,11 +37,20 @@ public class StepDefs {
 
     @When("I divide them")
     public void dividingNumbers() {
-        result = calculator.process(number1, number2, DIVIDE);
+        try {
+            result = calculator.process(number1, number2, DIVIDE);
+            exception = null;
+        } catch (InvalidOperation e) {
+            exception = e.getMessage();
+        }
     }
 
-    @Then("I should get the result {double}")
-    public void checkingResult(double expectedResult) {
-        Assert.assertEquals(expectedResult, result, 0.0001);
+    @Then("I should get the result {double} or an exception {string}")
+    public void checkResult(Double expectedResult, @NotNull String expectedException) {
+        if (expectedException.isEmpty()) {
+            Assert.assertEquals(expectedResult, result, 0.0001);
+        } else {
+            Assert.assertEquals(expectedException, exception);
+        }
     }
 }
