@@ -34,10 +34,10 @@ public class Main {
                     }
                     break;
                 case "+":
-                    result = calculator.process(number1, number2, Operation.ADD);
+                    result = calculator.process(number1, number2, Operations.ADD);
                     break;
                 case "-":
-                    result = calculator.process(number1, number2, Operation.SUBTRACT);
+                    result = calculator.process(number1, number2, Operations.SUBTRACT);
                     break;
                 default:
                     exception = new IllegalArgumentException("Invalid operation: " + operationStr).getMessage();

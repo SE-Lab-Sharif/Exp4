@@ -8,9 +8,7 @@ import io.cucumber.java.en.When;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 
-import static org.example.Operations.DIVIDE;
-import static org.example.Operations.MULTIPLY;
-import static org.example.Operations.ADD;
+import static org.example.Operations.*;
 
 public class StepDefs {
     private Calculator calculator;
@@ -50,9 +48,9 @@ public class StepDefs {
         result = calculator.process(number1, number2, ADD);
     }
 
-    @When("I Subtract them")
-    public void subtractNumbers(){
-        result = calculator.process(number1, number2, SUBTRACT)
+    @When("I subtract them")
+    public void subtractNumbers() {
+        result = calculator.process(number1, number2, SUBTRACT);
     }
 
     @Then("I should get the result {double} or an exception {string}")

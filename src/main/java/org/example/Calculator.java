@@ -9,6 +9,8 @@ public class Calculator {
                 return divide(number1, number2);
             case ADD:
                 return add(number1, number2);
+            case SUBTRACT:
+                return subtract(number1, number2);
             default:
                 throw new IllegalArgumentException("Invalid operation: " + operation);
         }
