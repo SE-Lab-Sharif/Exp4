@@ -1,4 +1,4 @@
-Feature: addition operation
+Feature: subtraction operation
 
   Scenario Outline: add two double numbers and give the correct result
     Given I have a calculator
