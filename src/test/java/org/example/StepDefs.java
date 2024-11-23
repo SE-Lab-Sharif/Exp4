@@ -1,16 +1,16 @@
+package org.example;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import org.example.InvalidOperation;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 
-import org.example.Calculator;
-
 import static org.example.Operations.DIVIDE;
 import static org.example.Operations.MULTIPLY;
+import static org.example.Operations.ADD;
 
 public class StepDefs {
     private Calculator calculator;
@@ -43,6 +43,11 @@ public class StepDefs {
         } catch (InvalidOperation e) {
             exception = e.getMessage();
         }
+    }
+
+    @When("I add them")
+    public void addingNumbers() {
+        result = calculator.process(number1, number2, ADD);
     }
 
     @Then("I should get the result {double} or an exception {string}")
