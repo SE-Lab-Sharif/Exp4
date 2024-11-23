@@ -50,6 +50,11 @@ public class StepDefs {
         result = calculator.process(number1, number2, ADD);
     }
 
+    @When("I Subtract them")
+    public void subtractNumbers(){
+        result = calculator.process(number1, number2, SUBTRACT)
+    }
+
     @Then("I should get the result {double} or an exception {string}")
     public void checkResult(Double expectedResult, @NotNull String expectedException) {
         if (expectedException.isEmpty()) {

@@ -33,6 +33,12 @@ public class Main {
                         exception = e.getMessage();
                     }
                     break;
+                case "+":
+                    result = calculator.process(number1, number2, Operation.ADD);
+                    break;
+                case "-":
+                    result = calculator.process(number1, number2, Operation.SUBTRACT);
+                    break;
                 default:
                     exception = new IllegalArgumentException("Invalid operation: " + operationStr).getMessage();
             }

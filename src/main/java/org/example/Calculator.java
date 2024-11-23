@@ -28,4 +28,8 @@ public class Calculator {
     private double add(double number1, double number2) {
         return number1 + number2;
     }
+
+    private double subtract(double number1, double number2){
+        return number1 - number2;
+    }
 }
